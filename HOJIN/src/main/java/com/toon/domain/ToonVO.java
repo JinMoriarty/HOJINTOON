@@ -3,17 +3,7 @@ package com.toon.domain;
 import java.util.Date;
 
 public class ToonVO {
-	/*
- 	create table tbl_toon (
-    toonName      varchar2(50)    not null,
-    toonGenre     varchar2(30)    not null,
-    toonFin    number          not null,
-    toonImg     varchar(200)     null,
-    toonDes       varchar(500)    null,
-    toonDate      date            default sysdate,
-    primary key(toonName)  
-	);
-	*/
+
 	private String toonName;
 	private String toonGenre;
 	private int toonFin;

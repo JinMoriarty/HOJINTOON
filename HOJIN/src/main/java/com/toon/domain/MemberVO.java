@@ -3,19 +3,7 @@ package com.toon.domain;
 import java.util.Date;
 
 public class MemberVO {
-	/*
-	create table tbl_member (
-    userId      varchar2(50)    not null,
-    userPass    varchar2(100)   not null,
-    userName    varchar2(30)    not null,
-    userPhone    varchar2(30)    not null,
-    userTag    number    default 0,
-    userPoint    number    null,
-    regiDate    date            default sysdate,
-    verify      number          default 0,
-    primary key(userId)
-	);
-	 */
+
 	private String userId;
 	private String userPass;
 	private String userName;

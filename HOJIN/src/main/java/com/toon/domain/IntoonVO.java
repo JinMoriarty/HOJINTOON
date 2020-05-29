@@ -3,23 +3,7 @@ package com.toon.domain;
 import java.util.Date;
 
 public class IntoonVO {
-	/*
-	create table TBL_INTOON (
-    INTOON_LIST       number          not null,
-    INTOON_TITLE varchar2(50)    null,
-    INTOON_NUM     number    not null,
-    INTOON_IMG varchar2(50)    null,
-    INTOON_GOOD     number    not null,
-    INTOON_DAY     date        default sysdate,
-    INTOON_LOOK     number    not null,
-    INTOON_CASH     number    not null,
-    INTOON_CONTENT varchar2(50)    null,
-    INTOON_EXPLAIN varchar2(50)    null,
-    primary key(INTOON_LIST),
-    foreign key(INTOON_TITLE) references TBL_TOON(TOONNAME)
-	);
-	*/
-	
+
 	private int intoonList;
 	private String intoonTite;
 	private int intoonNum;
