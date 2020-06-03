@@ -4,10 +4,10 @@
 <ul>
 <c:if test="${member == null}">
 	<li>
-		<a href="/member/signin">로그인</a>
+		<a href="/member/signin">SIGN IN</a>
 	</li>
 	<li>
-		<a href="/member/signup">회원가입</a>
+		<a href="/member/signup">SIGN UP</a>
 	</li>
 </c:if>
 <c:if test="${member != null}">
