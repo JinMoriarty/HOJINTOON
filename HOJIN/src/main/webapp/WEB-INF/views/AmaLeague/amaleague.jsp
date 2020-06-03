@@ -50,18 +50,23 @@ section#container {
 	
 }
 
-section#container div#container_box div#Toontable{
+section#container div#container_box div#league{
 	position: absolute;
 	top: 20%;
-	left: 30%;
+	left: 35%;
 }
 
-section#container div#container_box div#TopToontable{
+section#container div#container_box div#Toontable{
 	position: absolute;
-	top: 70%;
-	left: 30%;
+	top: 60%;
+	left: 28%;
 }
 
+section#container div#container_box div#ad{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+}
 
 
 section#content {
@@ -213,57 +218,34 @@ footer#footer div#footer_box {
 			<div id="container_box">
 
 				<section id="content">
+				<div id="league">
+					<table width="100" style="border-collapse: collapse;">
+						<tr height="100" bgcolor="white">
+							<td align="center" colspan="4"><img
+								src="<spring:url value='/resources/img/league.png'/>"></td>
+						</tr>															
+					</table>
+				</div>
+				
 				<div id="Toontable">
 					<table width="100" style="border-collapse: collapse;">
 						<tr height="100" bgcolor="white">
-							<td align="center"><img
-								src="<spring:url value='/resources/img/today.png'/>"></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon1.png'/>">WEBTOON11<!-- 하이퍼링크 --></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon2.png'/>">WEBTOON22<!-- 하이퍼링크 --></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon3.png'/>">WEBTOON33<!-- 하이퍼링크 --></td>
-							<td align="center" rowspan="2"><img
-								src="<spring:url value='/resources/img/ad.png'/>"></td>
-						</tr>
-
-						<tr height="100" bgcolor="white">
 
 							<td align="center"><img
-								src="<spring:url value='/resources/img/cuchentoon.png'/>"></td>
+								src="<spring:url value='/resources/img/Toon4.png'/>">WEBTOON11</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;조회수 : ????<!-- 하이퍼링크 --></td>
 							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon1.png'/>">WEBTOON11<!-- 하이퍼링크 --></td>
+								src="<spring:url value='/resources/img/Toon1.png'/>">WEBTOON22</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;조회수 : ????<!-- 하이퍼링크 --></td>
 							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon2.png'/>">WEBTOON22<!-- 하이퍼링크 --></td>
+								src="<spring:url value='/resources/img/Toon2.png'/>">WEBTOON33</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;조회수 : ????<!-- 하이퍼링크 --></td>
 							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon3.png'/>">WEBTOON33<!-- 하이퍼링크 --></td>
-
+								src="<spring:url value='/resources/img/Toon3.png'/>">WEBTOON44</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;조회수 : ????<!-- 하이퍼링크 --></td>
+								
 						</tr>
 					</table>
 				</div>
-				<div id="TopToontable">
-					<table width="1000" style="border-collapse: collapse;">
-						<tr height="100" bgcolor="white">
-							<td align="center">
-								<h1>많이 본 웹툰</h1>
-								<ol>
-									<li>WEBTOON1 <!-- SQL문 --></li>
-									<li>WEBTOON2 <!-- SQL문 --></li>
-									<li>WEBTOON3 <!-- SQL문 --></li>
-								</ol>
-							</td>
-
-							<td align="center">
-								<h1>인기 웹툰</h1>
-								<ol>
-									<li>WEBTOON1 <!-- SQL문 --></li>
-									<li>WEBTOON2 <!-- SQL문 --></li>
-									<li>WEBTOON3 <!-- SQL문 --></li>
-								</ol>
-							</td>
-						</tr>
-					</table>
+				
+				<div id ="ad">
+				<img src="<spring:url value='/resources/img/ad.png'/>">
 				</div>
 				</section>
 
