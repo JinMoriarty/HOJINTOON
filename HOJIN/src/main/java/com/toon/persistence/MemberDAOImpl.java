@@ -28,4 +28,5 @@ public class MemberDAOImpl implements MemberDAO {
 		return sql.selectOne(namespace + ".signin", vo);
 	}
 
+
 }
