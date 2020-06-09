@@ -14,10 +14,10 @@
 	<!-- 오라클 -->
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
 		<property value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" name="driverClassName"/>
-		<property value="jdbc:log4jdbc:oracle:thin:@localhost:1521/XE" name="url"/>
+		<property value="jdbc:log4jdbc:oracle:thin:@localhost:1521/orcl" name="url"/>
 		
 		<!-- 자신이 사용하는 오라클 계정과 비밀번호로 변경 -->
-		<property value="admin" name="username"/>
+		<property value="c##admin" name="username"/>
 		<property value="1234" name="password"/>
 	</bean>
 	
