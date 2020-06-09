@@ -182,6 +182,7 @@ footer#footer ul li {
 			<table>
 				<thead>
 					<tr>
+						<th>번호</th>
 						<th>이름</th>
 						<th>장르</th>
 						<th>등록날짜</th>
@@ -190,6 +191,7 @@ footer#footer ul li {
 				<tbody>
 					<c:forEach items="${list}" var="list">
 						<tr>
+							<td>${list.toonNum}</td>
 							<td><a href="/admin/goods/view?n=${list.toonName}">${list.toonName}</a></td>
 							<td>${list.toonGenre}</td>
 							<td><fmt:formatDate value="${list.toonDate}"
