@@ -4,4 +4,5 @@
 <div style="float: left" class="page-header">
 	<a href="/" style="text-decoration: none"> <img src="<spring:url value='/resources/img/Logo.png'/>">
 	</a>
+	<a href="/member/test">테스트</a>
 </div>
