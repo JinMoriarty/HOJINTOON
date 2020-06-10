@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <div class="page-header">
-<a href="/admin/index">HOJIN Admin</a> 헤 더 영 역
+<a href="/" style="text-decoration: none"> <img src="<spring:url value='/resources/img/HL.png'/>"></a>
+<a href="/admin/index">HOJIN Admin</a>
 </div>

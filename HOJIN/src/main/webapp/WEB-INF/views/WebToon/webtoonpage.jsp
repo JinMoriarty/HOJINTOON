@@ -46,23 +46,36 @@ nav#nav {
 	
 }
 
-section#container {
-	
+section#container div#container_box h1#sun {
+	position: absolute;
+	top: 30%;
+	left: 37%;
 }
 
-section#container div#container_box div#Toontable{
+section#container div#container_box h1#hu {
+	position: absolute;
+	top: 21%;
+	left: 37%;
+}
+
+section#container div#container_box div#league {
+	width: 1000px;
 	position: absolute;
 	top: 20%;
 	left: 30%;
 }
 
-section#container div#container_box div#TopToontable{
+section#container div#container_box div#Toontable {
 	position: absolute;
-	top: 70%;
-	left: 30%;
+	top: 60%;
+	left: 28%;
 }
 
-
+section#container div#container_box div#ad {
+	position: absolute;
+	top: 20%;
+	left: 85%;
+}
 
 section#content {
 	float: right;
@@ -75,7 +88,6 @@ aside#aside {
 	position: absolute;
 	top: 20%;
 	left: 20%;
-	
 }
 
 section#container::after {
@@ -192,6 +204,43 @@ footer#footer {
 footer#footer div#footer_box {
 	padding: 0 20px;
 }
+
+#pixed {
+	position: absolute;
+	top: 30%;
+	left: 65%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+	margin-right: -4px;
+}
+
+#delete {
+	position: absolute;
+	top: 30%;
+	left: 66.7%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+	margin-left: -3px;
+}
+
+#btn button {
+	border: 1px solid red;
+	background-color: rgba(0, 0, 0, 0);
+	color: black;
+	padding: 5px;
+}
+
+#btn button:hover{
+    color:white;
+    background-color: skyblue;
+}
+
+#test{
+	position: absolute;
+	top: 50%;
+	left: 45%;
+}
+
 </style>
 
 </head>
@@ -213,58 +262,26 @@ footer#footer div#footer_box {
 			<div id="container_box">
 
 				<section id="content">
-				<div id="Toontable">
-					<table width="100" style="border-collapse: collapse;">
-						<tr height="100" bgcolor="white">
-							<td align="center"><img
-								src="<spring:url value='/resources/img/today.png'/>"></td>
-							<td align="center"><a href="/ToonList/toonlist?view?n=해수달의눈물" style="text-decoration: none"><img
-								src="<spring:url value='/resources/img/Toon1.png'/>">WEBTOON11</a></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon2.png'/>">WEBTOON22<!-- 하이퍼링크 --></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon3.png'/>">WEBTOON33<!-- 하이퍼링크 --></td>
-							<td align="center" rowspan="2"><img
-								src="<spring:url value='/resources/img/ad.png'/>"></td>
-						</tr>
+				
+					<div id="league">
+						<img src="<spring:url value='/resources/img/Toon1.png'/>">
+						<hr>
+					</div>
 
-						<tr height="100" bgcolor="white">
+					<h1 id="hu">
+						WebToon1</br>양진석
+					</h1>
 
-							<td align="center"><img
-								src="<spring:url value='/resources/img/cuchentoon.png'/>"></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon1.png'/>">WEBTOON11<!-- 하이퍼링크 --></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon2.png'/>">WEBTOON22<!-- 하이퍼링크 --></td>
-							<td align="center"><img
-								src="<spring:url value='/resources/img/Toon3.png'/>">WEBTOON33<!-- 하이퍼링크 --></td>
+					<h1 id="sun">양진석의 이거 ㄹㅇ 감동 실화?</h1>
 
-						</tr>
-					</table>
-				</div>
-				<div id="TopToontable">
-					<table width="1000" style="border-collapse: collapse;">
-						<tr height="100" bgcolor="white">
-							<td align="center">
-								<h1>많이 본 웹툰</h1>
-								<ol>
-									<li>WEBTOON1 <!-- SQL문 --></li>
-									<li>WEBTOON2 <!-- SQL문 --></li>
-									<li>WEBTOON3 <!-- SQL문 --></li>
-								</ol>
-							</td>
+					<div id="btn">
+						<button id="pixed">수정</button>
+						<button id="delete">삭제</button>
+					</div>
 
-							<td align="center">
-								<h1>인기 웹툰</h1>
-								<ol>
-									<li>WEBTOON1 <!-- SQL문 --></li>
-									<li>WEBTOON2 <!-- SQL문 --></li>
-									<li>WEBTOON3 <!-- SQL문 --></li>
-								</ol>
-							</td>
-						</tr>
-					</table>
-				</div>
+					<div id="ad">
+						<img src="<spring:url value='/resources/img/ad.png'/>">
+					</div>
 				</section>
 
 				<aside id="aside">
@@ -281,5 +298,8 @@ footer#footer div#footer_box {
 		</footer>
 
 	</div>
+	
+	<h1 id="test">웹툰 이미지 들어갈 곳</h1>
+	
 </body>
 </html>

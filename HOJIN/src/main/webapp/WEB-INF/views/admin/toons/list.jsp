@@ -22,10 +22,10 @@
 }
 
 #container_box table th {
-	font-size: 20px;
+	font-size: 40px;
 	font-weight: bold;
 	text-align: center;
-	padding: 10px;
+	padding: 50px;
 	border-bottom: 2px solid #666;
 }
 
@@ -34,7 +34,7 @@
 }
 
 #container_box table td {
-	padding: 10px;
+	padding: 50px;
 	text-align: center;
 }
 
@@ -62,6 +62,7 @@ div#root {
 }
 
 header#header {
+	background : #C8FFFF;
 	font-size: 60px;
 	padding: 20px 0;
 }
@@ -72,6 +73,7 @@ header#header h1 a {
 }
 
 nav#nav {
+	background : #FFFFFF;
 	padding: 10px;
 	text-align: right;
 }
@@ -82,9 +84,11 @@ nav#nav ul li {
 }
 
 section#container {
+	background : #FFFFFF;
+	height : 900px;
 	padding: 20px 0;
-	border-top: 2px solid #eee;
-	border-bottom: 2px solid #eee;
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
 }
 
 section#container::after {
@@ -115,47 +119,25 @@ aside ul li a {
 }
 
 aside ul li a:hover {
-	background: #eee;
+	background: #BEEFFF;
 }
 
 footer#footer {
-	background: #f9f9f9;
+	position: fixed;
+    left: 5%;
+    top: 94%;
+   
+    width: 90%;
+    
+	background: #C8FFFF;
 	padding: 20px;
+	
+	margin: 0px auto;
 }
 
 footer#footer ul li {
 	display: inline-block;
 	margin-right: 10px;
-}
-</style>
-
-
-
-<style>
-#container_box table {
-	width: 900px;
-}
-
-#container_box table th {
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-	padding: 10px;
-	border-bottom: 2px solid #666;
-}
-
-#container_box table tr:hover {
-	background: #eee;
-}
-
-#container_box table td {
-	padding: 10px;
-	text-align: center;
-}
-
-#container_box table img {
-	width: 150px;
-	height: auto;
 }
 </style>
 
@@ -192,7 +174,7 @@ footer#footer ul li {
 					<c:forEach items="${list}" var="list">
 						<tr>
 							<td>${list.toonNum}</td>
-							<td><a href="/admin/goods/view?n=${list.toonName}">${list.toonName}</a></td>
+							<td><a href="/WebToon/webtoonpage">${list.toonName}</a></td>
 							<td>${list.toonGenre}</td>
 							<td><fmt:formatDate value="${list.toonDate}"
 									pattern="yyyy-MM-dd" /></td>
