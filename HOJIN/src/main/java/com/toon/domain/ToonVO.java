@@ -26,6 +26,14 @@ public class ToonVO {
 	private String toonImg;
 	private String toonDes;
 	private Date toonDate;
+	private String toonThumbImg;
+	
+	public String getToonThumbImg() {
+		return toonThumbImg;
+	}
+	public void setToonThumbImg(String toonThumbImg) {
+		this.toonThumbImg = toonThumbImg;
+	}
 	public int getToonNum() {
 		return toonNum;
 	}

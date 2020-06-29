@@ -34,7 +34,7 @@
 		
 	</li>
 	<li><a href="/AmaLeague/amaleague">아마리그</a></li>
-	<li><a href="/shop/list?c=400&l=1">마이페이지</a>
+	<li><a href="/Mypage/mypage">마이페이지</a>
 			
 		<ul class="low">
 			<li><a href="/shop/list?c=101&l=2">책갈피</a></li>

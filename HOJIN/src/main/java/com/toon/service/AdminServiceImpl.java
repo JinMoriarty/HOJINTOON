@@ -35,4 +35,22 @@ public class AdminServiceImpl implements AdminService {
 		return dao.toonslist();
 	}
 	
+	// 상세 작품 페이지 조회
+	@Override
+	public ToonVO ToonView(int toonNum) throws Exception {
+		return dao.ToonView(toonNum);
+	}
+	
+	// 작품 수정
+	@Override
+	public void ToonModify(ToonVO vo) throws Exception {
+		dao.ToonModify(vo);
+	}
+	
+	// 작품 수정
+	@Override
+	public void ToonDelete(int toonNum) throws Exception {
+		dao.ToonDelete(toonNum);
+	}
+	
 }

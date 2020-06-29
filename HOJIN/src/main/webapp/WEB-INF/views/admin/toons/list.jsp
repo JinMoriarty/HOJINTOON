@@ -34,6 +34,7 @@
 }
 
 #container_box table td {
+	width:100px;
 	padding: 50px;
 	text-align: center;
 }
@@ -139,6 +140,11 @@ footer#footer ul li {
 	display: inline-block;
 	margin-right: 10px;
 }
+
+table td{
+	width: 200px;
+}
+
 </style>
 
 </head>
@@ -174,7 +180,7 @@ footer#footer ul li {
 					<c:forEach items="${list}" var="list">
 						<tr>
 							<td>${list.toonNum}</td>
-							<td><a href="/WebToon/webtoonpage">${list.toonName}</a></td>
+							<td><a href="/admin/goods/view?n=${list.toonNum}">${list.toonName}</a></td>
 							<td>${list.toonGenre}</td>
 							<td><fmt:formatDate value="${list.toonDate}"
 									pattern="yyyy-MM-dd" /></td>

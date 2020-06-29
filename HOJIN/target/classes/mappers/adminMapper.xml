@@ -7,25 +7,63 @@
 
 	<!-- 카테고리 호출 -->
 	<select id="category" resultType="com.toon.domain.CategoryVO">
-		select level, cateName, cateCode, cateCodeRef from toon_category
-        start with cateCodeRef is null connect by prior cateCode = cateCodeRef
+		select cateName,
+		cateCode, cateCodeRef from toon_category
+		start with cateCodeRef is null
+		connect by prior cateCode = cateCodeRef
 	</select>
 
 	<!-- 작품 등록 -->
 	<insert id="register">
-		insert into tbl_toon (toonNum, toonName,toonGenre, cateCode, toonDes)
-     values (tbl_toon_seq.nextval, #{toonName}, #{toonGenre}, #{cateCode}, #{toonDes})
+		insert into tbl_toon (toonNum, toonName,toonGenre,
+		cateCode, toonDes, toonImg, toonThumbImg)
+		values (tbl_toon_seq.nextval, #{toonName},
+		#{toonGenre}, #{cateCode},
+		#{toonDes},
+		#{toonImg}, #{toonThumbImg})
 	</insert>
 
 	<!-- 작품 목록 -->
 	<select id="toonslist" resultType="com.toon.domain.ToonVO">
-		SELECT toonName, toonGenre,
-		toonFin, toonImg, toonDes, toonDate from tbl_toon
+		SELECT toonNum, toonName,
+		toonGenre,
+		toonFin, cateCode, toonImg, toonDes, toonDate
+		from tbl_toon
+		order by toonNum desc
 	</select>
 
 	<!-- 작품 조회 -->
-	<select id="toonsView" resultType="com.toon.domain.ToonVO">
-		SELECT toonName, toonGenre,
-		toonFin, toonImg, toonDes, toonDate from tbl_toon
+	<select id="toonsView" resultType="com.toon.domain.ToonViewVO">
+		select toonNum, toonName, toonGenre,
+		toonFin, toonImg, toonDes, toonDate, toonThumbImg 
+		from tbl_toon
+		where toonNum = #{toonNum}
 	</select>
+
+	<!-- 상세 작품 페이지 조회 -->
+	<select id="ToonView" resultType="com.toon.domain.ToonVO">
+		select toonNum, toonName,
+		toonGenre, toonFin, cateCode, toonImg, toonDes, toonDate
+		from tbl_toon
+		where toonNum = #{toonNum}
+	</select>
+
+	<!-- 상품 수정 -->
+	<update id="ToonModify">
+		update tbl_toon
+		set
+		toonName = #{toonName},
+		toonGenre = #{toonGenre},
+		toonDes = #{toonDes},
+		toonImg = #{toonImg},
+		toonThumbImg = #{toonThumbImg}
+		where toonNum = ${toonNum}
+	</update>
+
+	<!-- 상품 삭제 -->
+	<delete id="ToonDelete">
+		delete
+		    tbl_toon
+		where toonNum = #{toonNum}
+	</delete>
 </mapper>
